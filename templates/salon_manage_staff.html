@@ -1,0 +1,59 @@
+{% include 'salon_header.html' %}
+<form method="post">
+  <center>
+    <table>
+      <h1>Adding Staff</h1>
+      <tr>
+        <th>First Name</th>
+        <td><input type="text" name="fname"></td>
+      </tr>
+      <tr>
+        <th>Last Name</th>
+        <td><input type="text" name="lname"></td>
+      </tr>
+      <tr>
+        <th>Join Date</th>
+        <td><input type="date" name="jdate"></td>
+      </tr>
+      <tr>
+        <th>Date of Birth</th>
+        <td><input type="date" name="ddate"></td>
+      </tr>
+      <tr>
+        <th>Gender</th>
+        <td>Female<input type="radio" name="gender" value="Male">Male<input type="radio" name="gender" value="Female"></td>
+      </tr>
+      <tr>
+        <th>House Name</th>
+        <td><input type="text" name="house"></td>
+      </tr>
+      <tr>
+        <th>City</th>
+        <td><input type="text" name="city"></td>
+      </tr>
+      <tr>
+        <th>District</th>
+        <td><input type="text" name="district"></td>
+      </tr>
+      <tr>
+        <th>Pin</th>
+        <td><input type="number" name="pin"></td>
+      </tr>
+      <tr>
+        <th>Phone Number</th>
+        <td><input type="number" name="phone"></td>
+      </tr>
+       <tr>
+        <th>Username</th>
+        <td><input type="text" name="uname"></td>
+      </tr>
+       <tr>
+        <th>Password</th>
+        <td><input type="password" name="passwrd"></td>
+      </tr>
+        <td align="center" colspan="3"><input type="submit" name="submit" value="ADD"></td>
+      </tr>
+    </table>
+  </center>
+</form>
+{% include 'salon_footer.html' %}

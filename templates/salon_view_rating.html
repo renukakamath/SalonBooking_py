@@ -1,0 +1,23 @@
+{% include 'salon_header.html' %}
+    <center>
+        <h1>Ratings</h1>
+  <table border="2px">
+    <thead>
+      <tr>
+        <th>Customer Name</th>
+        <th>Rating</th>
+        <th>Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for i in res %}
+      <tr>
+        <td>{{ i['c_fname'] }} {{ i['c_lname'] }}</td>
+        <td>{{ i['rating'] }}</td>
+        <td>{{ i['date'] }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>         
+  </table>
+    </center>
+{% include 'salon_footer.html' %}

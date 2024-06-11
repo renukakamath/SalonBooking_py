@@ -1,0 +1,27 @@
+{% include 'admin_header.html' %}
+<center>
+        <h1>Complaints List</h1>
+  <table border="2px">
+    <thead>
+      <tr>
+        <th>Customer Name</th>
+        <th>Salon Name</th>
+        <th>Complaints</th>
+        <th>Date</th>
+        <th>Reply</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for i in res %}
+      <tr>
+        <td>{{ i['c_fname'] }} {{ i['c_lname'] }}</td>
+        <td>{{ i['salon_name'] }}</td>
+        <td>{{ i['complaint'] }}</td>
+        <td>{{ i['date'] }}</td>
+        <td><a href="admin_add_reply">Send Reply</a>
+      </tr>
+      {% endfor %}
+    </tbody>         
+  </table>
+    </center>
+{% include 'admin_footer.html' %}

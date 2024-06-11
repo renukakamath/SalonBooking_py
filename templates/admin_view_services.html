@@ -1,0 +1,25 @@
+{% include 'admin_header.html' %}
+<center>
+        <h1>Services List</h1>
+  <table border="2px">
+    <thead>
+      <tr>
+        <th>Service Name</th>
+        <th>Staff Name</th>
+        <th>Salon Name</th>
+        <th>Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for i in res %}
+      <tr>
+        <td>{{ i['service_name'] }}</td>
+        <td>{{ i['s_fname'] }} {{ i['s_lname'] }}</td>
+        <td>{{ i['salon_name'] }}</td>
+        <td>{{ i['price'] }}</td>
+        </tr>
+      {% endfor %}
+    </tbody>         
+  </table>
+    </center>
+{% include 'admin_footer.html' %}

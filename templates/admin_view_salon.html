@@ -1,0 +1,32 @@
+{% include 'admin_header.html' %}
+    <center>
+        <h1>Registered Salons</h1>
+  <table border="2px">
+    <thead>
+      <tr>
+        <th>Salon Name</th>
+        <th>Place</th>
+        <th>Phone Number</th>
+        <th>Email Address</th>
+        <th>Address</th>
+        <th>Bookings</th>
+        <th>Payment</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      {% for i in res %}
+      <tr>
+        <td>{{ i['salon_name'] }}</td>
+        <td>{{ i['salon_place'] }}</td>
+        <td>{{ i['salon_phone'] }}</td>
+        <td>{{ i['salon_email'] }}</td>
+        <td>{{ i['salon_address'] }}</td>
+        <td><a href="admin_view_booking">Bookings</a></td>
+        <td><a href="admin_view_payment">Payments</a></td>
+      </tr>
+      {% endfor %}
+    </tbody>         
+  </table>
+    </center>
+{% include 'admin_footer.html' %}

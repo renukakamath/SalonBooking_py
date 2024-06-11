@@ -1,0 +1,27 @@
+{% include 'admin_header.html' %}
+    <center>
+        <h1>Bookings</h1>
+  <table border="2px">
+    <thead>
+      <tr>
+        <th>Customer Name</th>
+        <th>Service Name</th>
+        <th>Price</th>
+        <th>Date</th>
+        <th>Time Slot</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for i in res %}
+      <tr>
+        <td>{{ i['c_fname'] }}{{ i['c_lname'] }}</td>
+        <td>{{ i['service_name'] }}</td>
+        <td>{{ i['price'] }}</td>
+        <td>{{ i['b_date'] }}</td>
+        <td>{{ i['time_slot'] }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>         
+  </table>
+    </center>
+{% include 'admin_footer.html' %}
